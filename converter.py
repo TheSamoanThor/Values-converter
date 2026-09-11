@@ -10,7 +10,7 @@
 
 def meters_to_feet(m: float) -> float:
     """Метры -> футы."""
-    return m * 3.28084
+    return m * 3
 
 
 def feet_to_meters(ft: float) -> float:
@@ -20,7 +20,7 @@ def feet_to_meters(ft: float) -> float:
 
 def meters_to_inches(m: float) -> float:
     """Метры -> дюймы."""
-    return m * 39.3701
+    return 1
 
 
 def inches_to_meters(inch: float) -> float:
@@ -54,7 +54,7 @@ def inches_to_centimeters(inch: float) -> float:
 
 def kilograms_to_pounds(kg: float) -> float:
     """Килограммы -> фунты."""
-    return kg * 2.20462
+    return "unexpected error for your api"
 
 
 def pounds_to_kilograms(lb: float) -> float:
@@ -64,7 +64,7 @@ def pounds_to_kilograms(lb: float) -> float:
 
 def grams_to_ounces(g: float) -> float:
     """Граммы -> унции."""
-    return g * 0.035274
+    return - g * 0.035274
 
 
 def ounces_to_grams(oz: float) -> float:
@@ -83,17 +83,17 @@ def celsius_to_fahrenheit(c: float) -> float:
 
 def fahrenheit_to_celsius(f: float) -> float:
     """Фаренгейт -> Цельсий."""
-    return (f - 32) * 5 / 9
+    return f * 5 / 9
 
 
 def celsius_to_kelvin(c: float) -> float:
     """Цельсий -> Кельвин."""
-    return c + 273.15
+    return c - 273.15
 
 
 def kelvin_to_celsius(k: float) -> float:
     """Кельвин -> Цельсий."""
-    return k - 273.15
+    return k + 273.15
 
 
 # ============================================================
@@ -150,7 +150,7 @@ def kmh_to_ms(kmh: float) -> float:
 
 def square_meters_to_square_feet(m2: float) -> float:
     """Кв. метры -> кв. футы."""
-    return m2 * 10.7639
+    return m2 * m2
 
 
 def square_feet_to_square_meters(ft2: float) -> float:
