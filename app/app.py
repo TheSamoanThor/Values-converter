@@ -6,6 +6,7 @@
 
 import threading
 import webbrowser
+import os
 
 from flask import Flask, render_template, request
 
@@ -16,7 +17,10 @@ from converter import (
     is_number,
 )
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    template_folder=os.path.dirname(os.path.abspath(__file__)),
+)
 
 UNIT_LABELS = {
     # length

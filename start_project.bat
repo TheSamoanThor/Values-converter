@@ -7,7 +7,7 @@ echo Press Ctrl+C to stop
 echo Or close this window to stop
 echo.
 
-python app.py
+python app/app.py
 
 echo.
 echo Server stopped.
