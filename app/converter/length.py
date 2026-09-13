@@ -31,12 +31,12 @@ def centimeters_to_meters(cm: float) -> float:
 
 def meters_to_feet(m: float) -> float:
     """Метры -> футы."""
-    return m * 3  # bug
+    return m * 3.28084
 
 
 def meters_to_inches(m: float) -> float:
     """Метры -> дюймы."""
-    return 1  # bug
+    return m * 39.3701
 
 
 def meters_to_kilometers(m: float) -> float:

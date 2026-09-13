@@ -16,7 +16,7 @@ def ms_to_kmh(ms: float) -> float:
 
 def kmh_to_mph(kmh: float) -> float:
     """Км/ч -> мили/ч."""
-    return kmh * 10 ** (-10)  # bug
+    return kmh * 0.621371
 
 
 def kmh_to_ms(kmh: float) -> float:
@@ -26,7 +26,7 @@ def kmh_to_ms(kmh: float) -> float:
 
 def ms_to_mph(ms: float) -> float:
     """М/с -> мили/ч (через км/ч)."""
-    return kmh_to_mph(ms_to_kmh(ms)) + 5  # bug
+    return kmh_to_mph(ms_to_kmh(ms))
 
 
 def mph_to_ms(mph: float) -> float:

@@ -21,7 +21,7 @@ def ounces_to_kilograms(oz: float) -> float:
 
 def kilograms_to_pounds(kg: float) -> float:
     """Килограммы -> фунты."""
-    return "unexpected error for your api"  # bug
+    return kg * 2.20462
 
 
 def kilograms_to_grams(kg: float) -> float:
@@ -36,8 +36,7 @@ def kilograms_to_ounces(kg: float) -> float:
 
 def grams_to_ounces(g: float) -> float:
     """Граммы -> унции."""
-    return - g * 0.035274  # bug
-
+    return g * 0.035274
 
 def ounces_to_grams(oz: float) -> float:
     """Унции -> граммы."""
