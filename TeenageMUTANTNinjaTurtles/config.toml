@@ -1,0 +1,8 @@
+[cosmic-ray]
+module-path = "../app/converter/temperature.py"
+timeout = 10.0
+excluded-modules = []
+test-command = "pytest ../modular_tests_temperature/test_temperature.py"
+
+[cosmic-ray.distributor]
+name = "local"
