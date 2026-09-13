@@ -18,7 +18,6 @@ from converter import (
 
 app = Flask(__name__)
 
-# Человекочитаемые названия единиц
 UNIT_LABELS = {
     # length
     "m": "Метры (m)",
@@ -36,29 +35,17 @@ UNIT_LABELS = {
     "c": "Цельсий (°C)",
     "f": "Фаренгейт (°F)",
     "k": "Кельвин (K)",
-    # volume
-    "l": "Литры (L)",
-    "gal": "Галлоны (gal)",
-    "ml": "Миллилитры (ml)",
-    "fl_oz": "Жидкие унции (fl oz)",
     # speed
     "kmh": "Км/ч (km/h)",
     "mph": "Мили/ч (mph)",
     "ms": "М/с (m/s)",
-    # area
-    "m2": "Кв. метры (m²)",
-    "ft2": "Кв. футы (ft²)",
-    "ha": "Гектары (ha)",
-    "ac": "Акры (ac)",
 }
 
 CATEGORY_LABELS = {
     "length": "Длина",
     "mass": "Масса",
     "temperature": "Температура",
-    "volume": "Объём",
     "speed": "Скорость",
-    "area": "Площадь",
 }
 
 
@@ -68,7 +55,6 @@ def index():
     result = None
     error = None
 
-    # Значения по умолчанию
     selected_category = "length"
     from_unit = "m"
     to_unit = "ft"
@@ -80,7 +66,6 @@ def index():
         to_unit = request.form.get("to_unit", "ft")
         input_value = request.form.get("value", "").strip()
 
-        # Валидация
         if not input_value:
             error = "Введите значение для конвертации."
         elif not is_number(input_value):
